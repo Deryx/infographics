@@ -1,3 +1,3 @@
 (function() {
-    var app = angular.module('infographicsApp', ["ngRoute", "googlechart", "chart.js"]);
+    var app = angular.module('infographicsApp', ["ngRoute", "chart.js"]);
 })();
