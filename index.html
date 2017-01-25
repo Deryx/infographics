@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>New Classrooms Software Developer Trial Project</title>
+
+    <meta name="author" content="Deryx E. Scott">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body ng-app="infographicsApp">
+
+    <h2>New Classrooms Software Developer Trial Project</h2>
+    <section ng-controller="PopulationController">
+
+        <div id="form">
+            <form>
+                <div><textarea rows="20" cols="80" ng-model="jsonInput"></textarea></div>
+                <div><input type="url" ng-model="urlInput" /></div>
+
+                <div id="buttons">
+                    <button ng-click="submit()">submit</button>
+                    <button ng-click="clear()">clear</button>
+                </div>
+            </form>
+        </div>
+
+        <p ng-show="showStatus">n = {{n}}</p>
+        <div id="row1" ng-show="showStatus">
+            <div>
+                <h5>percentage: <br>male vs. female</h5>
+                <span class="grayLabel">female: {{femalePercentage}}</span><span class="blueLabel">male: {{malePercentage}}</span>
+                <canvas id="chart1" class="chart chart-pie" chart-data="chart1Data" chart-labels="chart1Labels"></canvas>
+            </div>
+
+            <div>
+                <h5>percentage: <br>first names - a-m vs. n-z</h5>
+                <span class="grayLabel">N - Z: {{fnbPercentage}}</span><span class="blueLabel">A - M: {{fntPercentage}}</span>
+                <canvas id="chart2" class="chart chart-pie" chart-data="chart2Data" chart-labels="chart2Labels"></canvas>
+            </div>
+
+            <div>
+                <h5>percentage: <br>last names - a-m vs. n-z</h5>
+                <span class="grayLabel">N - Z: {{lnbPercentage}}</span><span class="blueLabel">A - M: {{lntPercentage}}</span>
+                <canvas id="chart3" class="chart chart-pie" chart-data="chart3Data" chart-labels="chart3Labels"></canvas>
+            </div>
+        </div>
+
+        <div id="row2" ng-show="showStatus">
+            <div>
+                <h5>percentage: <br>top 10 most populous states</h5>
+                <canvas id="chart4" class="chart chart-bar" chart-data="chart4Data" chart-labels="chart4Labels"></canvas>
+            </div>
+        </div>
+
+        <div id="row3" ng-show="showStatus">
+            <div>
+                <h5>percentage: <br>top 10 most populous states - females</h5>
+                <canvas id="chart5" class="chart chart-bar" chart-data="chart5Data" chart-labels="chart5Labels"></canvas>
+            </div>
+        </div>
+
+        <div id="row4" ng-show="showStatus">
+            <div>
+                <h5>percentage: <br>top 10 most populous states - males</h5>
+                <canvas id="chart6" class="chart chart-bar" chart-data="chart6Data" chart-labels="chart6Labels"></canvas>
+            </div>
+        </div>
+
+        <div id="row5" ng-show="showStatus">
+            <div>
+                <h5>percentage: <br>age range</h5>
+                <canvas id="chart7" class="chart chart-bar" chart-data="chart7Data" chart-labels="chart7Labels"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="http://bouil.github.io/angular-google-chart/ng-google-chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-chart.js/1.1.1/angular-chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.js"></script>
+    <script src="scripts/jquery-3.1.1.js"></script>
+    <script src="scripts/jsonpath.js"></script>
+    <script src="app/application.js"></script>
+    <script src="app/controllers/populationController.js"></script>
+    <script src="app/services/dataFactory.js"></script>
+</body>
+
+</html>

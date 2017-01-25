@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#form {
+    margin: 0 auto;
+    padding: 0;
+    width: 700px;
+    text-align: center;
+}
+
+#form textarea {
+    overflow-y: scroll;
+    margin: 20px;
+}
+
+#form input {
+    clear: both;
+}
+
+#buttons {
+    margin: 0 auto;
+    padding: 0;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+}
+
+#buttons button {
+    margin: 10px;
+}
+
+#row1,
+#row2,
+#row3,
+#row4,
+#row5 {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+    clear: both;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+    clear: both;
+    margin-top: 40px;
+}
+
+#row1 div {
+    width: 225px;
+    height: 300px;
+    border: 1px solid rgb(180, 180, 180);
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+h5 {
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+#row2 div,
+#row3 div,
+#row4 div,
+#row5 div {
+    text-align: center;
+    width: 550px;
+    height: 350px;
+    border: 1px solid rgb(180, 180, 180);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+span {
+    text-align: center;
+    margin: 15px;
+    font-size: 90%;
+}
+
+.grayLabel {
+    color: rgb(220, 220, 220);
+    font-weight: bold;
+}
+
+.blueLabel {
+    color: rgb(151, 187, 205);
+    font-weight: bold;
+}
